@@ -15,6 +15,23 @@ Passos a implementar:
 
 Ao baixar o projeto e tentar compila-lo para testar foi possivel identificar os seguintes erros abaixo listados:
 
-1. ![Falaha build](https://github.com/igorcsaraiva/TransacaoFinanceira/blob/master/img/FalhaBuild.png)
-1. ![Falaha build1](https://github.com/igorcsaraiva/TransacaoFinanceira/blob/master/img/FalhaBuild1.png)
-1. ![Falaha build2](https://github.com/igorcsaraiva/TransacaoFinanceira/blob/master/img/FalhaBuild2.png)
+1. 
+![Falha build](https://github.com/igorcsaraiva/TransacaoFinanceira/blob/master/img/FalhaBuild.png)
+2. 
+![Falha build1](https://github.com/igorcsaraiva/TransacaoFinanceira/blob/master/img/FalhaBuild1.png)
+3. 
+![Falha build2](https://github.com/igorcsaraiva/TransacaoFinanceira/blob/master/img/FalhaBuild2.png)
+
+A correção foi feita segindo as proprias mensagens de erro disparadas pelo processo de compilação tais como:
+
+1. Execução do comanda dotnet restore para realizar a restauração dos pacotes nugtes
+
+![Resolucao build](https://github.com/igorcsaraiva/TransacaoFinanceira/blob/master/img/ResolucaoFalhaBuild.png)
+
+2. Mudança do tipo de dado das variaveis relacionadas ao número da conta de origem e destino de uint para long
+
+![Resolucao build](https://github.com/igorcsaraiva/TransacaoFinanceira/blob/master/img/ResolucaoFalhaBuild1.png)
+
+3. Criação de um record para tipar o array de transação permitindo assim que os metodos que usem generics possam inferir o tipo ao quel estão relacionados
+
+![Resolucao build](https://github.com/igorcsaraiva/TransacaoFinanceira/blob/master/img/ResolucaoFalhaBuild2.png)
